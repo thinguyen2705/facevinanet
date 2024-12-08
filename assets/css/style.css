@@ -51,7 +51,14 @@ a {
   overflow: hidden;
 }
 /*===================== Header =========================*/
-.header {
+.fixed-header {
+  background: #e6f0ff;
+  padding-top: 26px;
+  position: sticky;
+  top: -26px;
+  z-index: 1;
+}
+.hero-wrap {
   position: relative;
   background: #e6f0ff;
   height: 100vh;
@@ -59,7 +66,9 @@ a {
 .navbar {
   display: flex;
   align-items: center;
-  padding-top: 38px;
+  /* padding-top: 38px; */
+  padding: 12px 0;
+  /* background: orange; */
 }
 .navbar ul {
   display: flex;
@@ -88,7 +97,7 @@ a {
   border-radius: 8px;
 }
 .hero {
-  margin-top: 130px;
+  padding-top: 130px;
 }
 .hero .info {
   width: 51%;
