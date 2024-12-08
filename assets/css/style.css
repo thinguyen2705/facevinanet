@@ -7,6 +7,10 @@
 html {
   font-size: 62.5%;
 }
+html,
+body {
+  scroll-behavior: smooth;
+}
 body {
   font-size: 1.6rem;
   font-family: "Poppins", sans-serif;
@@ -62,6 +66,7 @@ a {
   position: relative;
   background: #e6f0ff;
   height: calc(100vh - 90px);
+  justify-content: center;
 }
 .navbar {
   display: flex;
@@ -96,27 +101,27 @@ a {
   margin-left: 18px;
   border-radius: 8px;
 }
-.hero {
+.hero-wrap {
   padding-top: 130px;
 }
-.hero .info {
+.hero-wrap .info {
   width: 51%;
 }
-.hero .sub-title {
+.hero-wrap .sub-title {
   font-size: 1.8rem;
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.01rem;
   color: #687690;
 }
-.hero .title {
+.hero-wrap .title {
   margin-top: 8px;
   color: #000336;
   font-size: 6.4rem;
   font-weight: 700;
   line-height: 1.1875; /* 118.75% */
 }
-.hero .desc {
+.hero-wrap .desc {
   margin-top: 30px;
   color: #5a6473;
   font-size: 1.8rem;
