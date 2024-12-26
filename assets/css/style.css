@@ -25,7 +25,46 @@ body {
   max-width: 1200px;
   margin: 0 auto;
 }
+.zalo-support {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  background-color: #0084ff;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  animation: chop-dep 1.5s infinite;
+  transition: all 0.3s ease;
+}
+/* Hiệu ứng */
+@keyframes chop-dep {
+  0%,
+  100% {
+    opacity: 1; /* Hiển thị rõ */
+    transform: scale(1); /* Giữ kích thước bình thường */
+    box-shadow: 0 0 10px rgba(255, 87, 34, 0.8); /* Ánh sáng nhẹ */
+  }
+  50% {
+    opacity: 0.5; /* Mờ dần */
+    transform: scale(1.1); /* Phóng to nhẹ */
+    box-shadow: 0 0 20px rgb(243, 120, 19); /* Ánh sáng mạnh */
+  }
+}
 
+.zalo-support img {
+  border-radius: 8px;
+  width: 60px;
+  height: 60px;
+}
+
+.zalo-support:hover {
+  transform: scale(1.1);
+}
 /* Header */
 .header {
   background-color: #ffffff;
@@ -62,20 +101,29 @@ body {
   justify-content: space-between;
   gap: 20px;
   flex-wrap: wrap;
+  position: relative;
 }
 
 .hero-text {
   flex: 1;
   max-width: 600px;
 }
-
+.icon-inner {
+  max-width: 378px;
+  max-height: 100px;
+}
 .hero-text h2 {
   font-size: 2.5rem;
   margin-bottom: 20px;
 }
-.hero svg {
+.hero .my-svg-1 {
   width: 800px;
   height: 80px;
+}
+.hero .my-svg-2 {
+  width: 800px;
+  height: 80px;
+  transform: translate(-225px, -88px);
 }
 
 .hero-text p {
@@ -144,7 +192,6 @@ body {
     width: 140%;
     height: 150%;
   }
-
   .logo img {
     height: 150px;
     width: auto;
@@ -156,7 +203,9 @@ body {
     flex-direction: column; /* Xếp dọc trên màn hình nhỏ */
     text-align: center;
   }
-
+  .icon-inner {
+    padding-left: 20px;
+  }
   .hero-text {
     max-width: 100%;
   }
@@ -253,6 +302,8 @@ body {
   border-radius: 4px;
   text-decoration: none;
   cursor: pointer;
+  animation: chop-dep 1.5s infinite;
+  transition: all 0.3s ease;
 }
 
 .card .btn:hover {
@@ -295,6 +346,9 @@ blockquote {
   margin-left: auto;
   margin-right: auto;
   color: #ddd;
+}
+.process p span {
+  font-weight: bold;
 }
 
 .steps {
